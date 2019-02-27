@@ -9,11 +9,12 @@ public class PlayerMovement : MonoBehaviour {
 
     private Vector3 moveInput;
     private Vector3 moveVelocity;
-    new Camera mainCamera;
+    private Camera mainCamera;
     // Start is called before the first frame update
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
+        mainCamera = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour {
             Vector3 Look = cameraRay.GetPoint(rayLength);
             Debug.DrawLine(cameraRay.origin, Look, Color.blue);
 
-            transform.LookAt(new Vector3(Look.x, Look.y, Look.z));
+            transform.LookAt(new Vector3(Look.x,transform.position.y, Look.z));
         }
     }
     private void FixedUpdate()
