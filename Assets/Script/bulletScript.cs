@@ -12,11 +12,13 @@ public class bulletScript : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.velocity = transform.up * speed;
+        //set speed to "speed" in the direction of "up"
     }
     
     private void OnTriggerEnter(Collider other)
     {
         Destroy(this.gameObject);
+        //destroys the bullet upon contact with another object/collider
     }
     
     // Update is called once per frame
