@@ -13,7 +13,12 @@ public class bulletScript : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.velocity = transform.up * speed;
     }
-
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(this.gameObject);
+    }
+    
     // Update is called once per frame
     void Update()
     {
