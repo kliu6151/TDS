@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 moveInput;
     private Vector3 moveVelocity;
     private Camera mainCamera;
+
+    public Shooting pistol;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,15 @@ public class PlayerMovement : MonoBehaviour {
             Debug.DrawLine(cameraRay.origin, Look, Color.blue);
 
             transform.LookAt(new Vector3(Look.x,transform.position.y, Look.z));
+        }
+
+        if(Input.GetMouseButton(0))
+        {
+            pistol.isFiring = true;
+        }
+        else if(Input.GetMouseButtonUp(0))
+        {
+            pistol.isFiring = false;
         }
     }
     private void FixedUpdate()
