@@ -18,13 +18,14 @@ public class bulletScript : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.velocity = transform.up * speed;
         
-        //detects if the collision is with a enemy/damagable entity
     }
     
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Health>() != null)
+
         {
+            //detects if the collision is with a enemy/damagable entity
             //use GetComponent to access the script and thus the health
             health = other.GetComponent<Health>();
             health.hp = health.hp - damage;
