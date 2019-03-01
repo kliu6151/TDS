@@ -21,9 +21,7 @@ public class Shooting : MonoBehaviour
             {
                 countdown = bulletDelay;
                 bulletScript bulletCloning = Instantiate(bullet, firePoint.position, firePoint.rotation) as bulletScript;
-                bulletCloning.speed = bulletSpeed;
-                Destroy(gameObject, 3);
-
+                bulletCloning.speed = bulletSpeed;  
             }
         }
         else

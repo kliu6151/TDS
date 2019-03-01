@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6841374041665101772}
   - component: {fileID: 6841374041665101773}
   - component: {fileID: 6841374041665101774}
-  - component: {fileID: 6841374041665101775}
+  - component: {fileID: 6410507582335408162}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -90,7 +90,7 @@ MeshCollider:
   m_GameObject: {fileID: 6841374041665101768}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -125,7 +125,7 @@ CapsuleCollider:
   m_Height: 1.0000002
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6841374041665101775
+--- !u!114 &6410507582335408162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,5 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 874621aa03f39904585cf276cfff70f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 20
+  damage: 1
+  tag: Zombie
   rigidbody: {fileID: 6841374041665101773}
