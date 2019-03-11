@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 moveVelocity;
     private Camera mainCamera;
 
-    public Shooting pistol;
+    public Shooting primary;
+    public Shooting secondary;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +39,11 @@ public class PlayerMovement : MonoBehaviour {
 
         if(Input.GetMouseButton(0))
         {
-            pistol.isFiring = true;
+            primary.isFiring = true;
         }
         else if(Input.GetMouseButtonUp(0))
         {
-            pistol.isFiring = false;
+            primary.isFiring = false;
         }
     }
 
