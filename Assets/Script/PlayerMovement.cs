@@ -40,10 +40,12 @@ public class PlayerMovement : MonoBehaviour {
         if(Input.GetMouseButton(0))
         {
             primary.isFiring = true;
+            secondary.isFiring = true;
         }
         else if(Input.GetMouseButtonUp(0))
         {
             primary.isFiring = false;
+            secondary.isFiring = false;
         }
     }
 
