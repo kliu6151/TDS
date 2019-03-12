@@ -17,7 +17,7 @@ public class ZombieBenaviour : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<Health>() != null)
+        if (other.GetComponent<Health>() != null && other.tag.Equals("Player"))
         {
             //detects if the collision is with a enemy/damagable entity
             //use GetComponent to access the script and thus the health
