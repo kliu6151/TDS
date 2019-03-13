@@ -6,13 +6,21 @@ public class ZombieBenaviour : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent agent;
     public GameObject player;
-    private Health health;
+    private Health playerHealth;
+    private float health;
     public float damage;
     public float countdown = (float).5;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+    }
+
+    public void takeDamage(float amount)
+    {
+        health -= amount;
+
     }
     
     private void OnTriggerStay(Collider other)
@@ -27,12 +35,8 @@ public class ZombieBenaviour : MonoBehaviour
             {
                 //detects if the collision is with a enemy/damagable entity
                 //use GetComponent to access the script and thus the health
-                health = other.GetComponent<Health>();
-                health.hp = health.hp - damage;
-                if (health.hp <= 0)
-                {
-                    Destroy(other.gameObject);
-                }
+                playerHealth = other.GetComponent<Health>();
+                other.GetComponent<Health>().takeDamage(damage);
             }
         }
         // Update is called once per frame
