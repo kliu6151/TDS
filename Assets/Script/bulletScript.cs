@@ -36,7 +36,7 @@ public class bulletScript : MonoBehaviour
             }
         }
         //destroys the bullet upon contact with another object/collider
-        Destroy(gameObject, 0.1f);
+        Destroy(gameObject, 0.00000000000000001f);
     }
     
     // Update is called once per frame
