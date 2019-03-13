@@ -17,6 +17,7 @@ public class ZombieBenaviour : MonoBehaviour
     
     private void OnTriggerStay(Collider other)
     {
+        if (other.GetComponent<Health>() != null && other.tag.Equals("Player"))
         countdown -= Time.deltaTime;
         if (countdown <= 0)
         {
