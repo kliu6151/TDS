@@ -7,9 +7,8 @@ public class bulletScript : MonoBehaviour
 
     public float speed;
     public float damage;
-    public string tag;
     private Health health;
-    public Rigidbody rigidbody;
+    private Rigidbody rigidbody;
     // Start is called before the first frame update
     void Start()
     {

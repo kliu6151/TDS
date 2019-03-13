@@ -276,7 +276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7fb1e3b6f0cb22438808fed2ee41a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!1 &541504842
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,9 +333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 541504843}
-  player: {fileID: 0}
   damage: 0
-  tag: 
+  countdown: 0.5
 --- !u!65 &541504845
 BoxCollider:
   m_ObjectHideFlags: 0

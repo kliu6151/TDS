@@ -5,14 +5,13 @@ using UnityEngine;
 public class ZombieBenaviour : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent agent;
-    public GameObject player;
     private Health health;
     public float damage;
     public float countdown = (float).5;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+
     }
     
     private void OnTriggerStay(Collider other)
@@ -39,6 +38,6 @@ public class ZombieBenaviour : MonoBehaviour
     }
     void Update()
     {
-        agent.SetDestination(player.transform.position);
+        agent.SetDestination(GameObject.FindWithTag("Player").transform.position);
     }
 }
