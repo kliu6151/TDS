@@ -48,14 +48,6 @@ public class PlayerMovement : MonoBehaviour {
             secondary.isFiring = false;
         }
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Zombie")
-        {
-            Debug.Log("Taking Dmg");
-        }
-    }
     private void FixedUpdate()
     {
         playerRigidbody.velocity = moveVelocity;

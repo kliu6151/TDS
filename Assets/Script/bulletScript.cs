@@ -26,7 +26,6 @@ public class bulletScript : MonoBehaviour
         {
             //detects if the collision is with a enemy/damagable entity
             //use GetComponent to access the script and thus the health
-            Debug.Log("Bullet doing dmg");
             other.GetComponent<Health>().takeDamage(damage);
         }
         //destroys the bullet upon contact with another object/collider
