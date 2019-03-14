@@ -3,9 +3,14 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float hp;
-    private float startHealth = 100;
+    public float hp = 100;
+    private float startHealth;
     public Image healthBar;
+
+    public void Start()
+    {
+        startHealth = hp;
+    }
 
     public void takeDamage(float amount)
     {

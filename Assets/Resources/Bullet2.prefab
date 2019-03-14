@@ -57,8 +57,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   damage: 30
-  tag: Zombie
-  rigidbody: {fileID: 699878953071446528}
+  pierce: 2
+  current: 0
 --- !u!23 &1817806069682691845
 MeshRenderer:
   m_ObjectHideFlags: 0

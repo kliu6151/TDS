@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnerBehaviour : MonoBehaviour
 {
-    public float spawnerDelay;
+    public float spawnerDelay = 5;
     private float countdown;
     // Start is called before the first frame update
     void Start()
