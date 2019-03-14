@@ -14,7 +14,7 @@ public class ZombieBenaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+
     }
 
     public void takeDamage(float amount)
@@ -43,6 +43,6 @@ public class ZombieBenaviour : MonoBehaviour
     }
     void Update()
     {
-        agent.SetDestination(player.transform.position);
+        agent.SetDestination(GameObject.FindWithTag("Player").transform.position);
     }
 }

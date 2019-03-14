@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6599602435699351816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.012279483, y: 0.5, z: -0.7900009}
+  m_LocalPosition: {x: 0.041, y: 0.5, z: -0.697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnerDelay: 5
-  Zombie: {fileID: 6173612118788832940, guid: 5dfc92234be7df342b09cf7debb652f1, type: 3}
+  spawnerRange: 3
 --- !u!114 &5575088536898476543
 MonoBehaviour:
   m_ObjectHideFlags: 0
