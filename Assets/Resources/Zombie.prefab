@@ -111,9 +111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 9220140557832034632}
   player: {fileID: 0}
-  damage: 50
+  damage: 5
   countdown: 0.5
---- !u!114 &9220140557832034635
+--- !u!114 &6173612118788832941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
