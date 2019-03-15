@@ -49,13 +49,6 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Zombie")
-        {
-            Debug.Log("Taking Dmg");
-        }
-    }
     private void FixedUpdate()
     {
         playerRigidbody.velocity = moveVelocity;
