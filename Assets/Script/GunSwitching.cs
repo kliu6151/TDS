@@ -5,8 +5,6 @@ using UnityEngine;
 public class GunSwitching : MonoBehaviour
 {
     private List<GameObject> PrefabList = new List<GameObject>();
-    public bool ActiveGun1 = true;
-    public bool ActiveGun2 = false;
     private int index;
     private int selected = 0;
     // Start is called before the first frame update
@@ -14,8 +12,12 @@ public class GunSwitching : MonoBehaviour
     {
         PrefabList.Add(GameObject.FindWithTag("Gun1"));
         PrefabList.Add(GameObject.FindWithTag("Gun2"));
-        PrefabList[0].SetActive(ActiveGun1);
-        PrefabList[1].SetActive(ActiveGun2);
+        //PrefabList.Add(GameObject.FindWithTag("PutTagOfNewGun"));
+        for (int i = 0; i<PrefabList.Count; i++)
+        {
+            PrefabList[i].SetActive(false);
+        }
+        PrefabList[0].SetActive(true);
     }
     // Update is called once per frame
     void Update()
@@ -23,7 +25,10 @@ public class GunSwitching : MonoBehaviour
         index = PrefabList.Count;
         if(Input.GetKeyUp("space"))
         {
-            PrefabList[selected].SetActive(false);
+            for(int i = 0; i<PrefabList.Count; i++)
+            {
+                PrefabList[i].SetActive(false);
+            }
             selected++;
             if(selected == index)
             {

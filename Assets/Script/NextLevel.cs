@@ -7,6 +7,8 @@ public class NextLevel : MonoBehaviour
 {
     // Start is called before the first frame update
     public static int level = 1;
+    public System.Boolean manualPick;
+    public int levelChoice;
     void Start()
     {
         
@@ -18,6 +20,10 @@ public class NextLevel : MonoBehaviour
         if (GameObject.FindWithTag("Zombie") == null)
         {
             level++;
+            if (manualPick)
+            {
+                level = levelChoice;
+            }
             SceneManager.LoadScene(level);
         }
     }

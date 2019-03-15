@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class How2Script : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -21,9 +21,9 @@ public class StartButton : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.gameObject.name == "Start")
+                if (hit.collider.gameObject.name == "Tutorial")
                 {
-                    SceneManager.LoadScene("New Scene");
+                    SceneManager.LoadScene("Tutorial");
                 }
             }
         }

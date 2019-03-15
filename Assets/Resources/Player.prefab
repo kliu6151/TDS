@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 1580052973}
   - component: {fileID: 1580052972}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HP Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,8 +557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f5c206cc9193d4dbff9eef797f1f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActiveGun1: 1
-  ActiveGun2: 0
 --- !u!54 &7374979604972155879
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -678,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc62e204bf327641bddee5d8d2d12db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFiring: 1
+  isFiring: 0
   bullet: {fileID: 6196745927476208036, guid: f06286d51c7878048a8906ca1b9e4e6d, type: 3}
   bulletSpeed: 20
   bulletDelay: 0.1
