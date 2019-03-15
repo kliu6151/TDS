@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c54e66fe1ff6a944863792dc27bf845
-  - enabled: 1
-    path: Assets/Scenes/tsejto.unity
-    guid: 92550fbfb76dc3e42975961192eef809
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/New Scene.unity
     guid: 51f672a27df51a64fa55430c09f3c6c8
