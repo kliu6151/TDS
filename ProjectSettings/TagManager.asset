@@ -7,6 +7,7 @@ TagManager:
   - Zombie
   - Gun1
   - Gun2
+  - Wall
   layers:
   - Default
   - TransparentFX
