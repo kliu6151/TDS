@@ -8,6 +8,7 @@ TagManager:
   - Gun1
   - Gun2
   - Wall
+  - bullet
   layers:
   - Default
   - TransparentFX
