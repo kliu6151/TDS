@@ -28,4 +28,8 @@ public class StartButton : MonoBehaviour
             }
         }
     }
+    public void startScene()
+    {
+        SceneManager.LoadScene("New Scene");
+    }
 }

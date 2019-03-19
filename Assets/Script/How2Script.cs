@@ -28,4 +28,8 @@ public class How2Script : MonoBehaviour
             }
         }
     }
+    public void tutorialScene()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 }
