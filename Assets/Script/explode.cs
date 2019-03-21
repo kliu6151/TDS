@@ -8,6 +8,7 @@ public class explode : MonoBehaviour
     public float explosionDmg = 50;
     public ParticleSystem particleSystem;
     public Renderer render;
+    public collider entity;
     private bool oneTime = true;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class explode : MonoBehaviour
             if(oneTime)
             {
                 render.enabled = false;
+                entity.enabled = false;
                 other.GetComponent<Health>().takeDamage(explosionDmg);
                 particleSystem.Play();
                 oneTime =  !oneTime;
