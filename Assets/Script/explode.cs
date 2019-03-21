@@ -6,8 +6,9 @@ public class explode : MonoBehaviour
 {
     public float health = 1;
     public float explosionDmg = 50;
-    private bool oneTime = true;
     public ParticleSystem particleSystem;
+    public Renderer render;
+    private bool oneTime = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class explode : MonoBehaviour
         {
             if(oneTime)
             {
+                render.enabled = false;
                 other.GetComponent<Health>().takeDamage(explosionDmg);
                 particleSystem.Play();
                 oneTime =  !oneTime;
@@ -35,7 +37,7 @@ public class explode : MonoBehaviour
         }
         if (health <= 0)
         {
-            Destroy(gameObject, 0.1f);
+            Destroy(gameObject, 4f);
         }
     }
 }
