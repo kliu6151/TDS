@@ -122,6 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   explosionDmg: 50
+  particleSystem: {fileID: 198000012204478471}
+  render: {fileID: 4050955749888883441}
+  entity: {fileID: 4050955749888883442}
 --- !u!1001 &601560033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371,6 +374,12 @@ PrefabInstance:
 --- !u!4 &4000009612580025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010212820824, guid: acf39d9f4addf294d93fa56fa373961b,
+    type: 3}
+  m_PrefabInstance: {fileID: 601560033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &198000012204478471 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198000012777718758, guid: acf39d9f4addf294d93fa56fa373961b,
     type: 3}
   m_PrefabInstance: {fileID: 601560033}
   m_PrefabAsset: {fileID: 0}

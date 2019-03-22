@@ -16,32 +16,43 @@ public class bulletScript : MonoBehaviour
         //set speed to "speed" in the direction of "up"
         //the bullet moves where the pointy part is facing (given that it's rotate 90* in the x axis)
         GetComponent<Rigidbody>().velocity = transform.up * speed;
-        Destroy(gameObject, 3);
+        Destroy(gameObject, 2);
     }
 
     public void OnCollisionEnter(Collision collision)
     {
+        //destroys the bullet upon contact with another object/collider
+        if (this.gameObject.name == "Bullet2(Clone)" && collision.gameObject.tag != "Wall")
+        {
+            collision.gameObject.GetComponent<Collider>().isTrigger = true;
+            current++;
+            if (current == pierce)
+            {
+                current = 0;
+                Destroy(this.gameObject, 0.01f);
+            }
+        }
+        else
+        {
+            Destroy(this.gameObject, 0.0001f);
+        }
         if (collision.gameObject.GetComponent<Health>() != null)
         {
             //detects if the collision is with a enemy/damagable entity
             //use GetComponent to access the script and thus the health
 
             collision.gameObject.GetComponent<Health>().takeDamage(damage);
+            
         }
-        //destroys the bullet upon contact with another object/collider
-        if (this.gameObject.name == "Bullet2(Clone)")
-        {
-            current++;
-            if (current == pierce)
-            {
-                current = 0;
-                Destroy(this.gameObject, 0.00001f);
-            }
-        }
-        else
-        {
-            Destroy(this.gameObject, 0.000001f);
-        }
+        
     }
-    
+    public void OnTriggerExit(Collider other)
+    {
+            if(other.tag != "Barrel")
+            {
+                other.isTrigger = false;
+            }
+    }
+
+
 }

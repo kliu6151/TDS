@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,9 +16,9 @@ public class ZombieBenaviour : MonoBehaviour
     {
     }
     
-    private void OnTriggerStay(Collider other)
+    private void OnCollisionStay(Collision other)
     {
-        if (other.GetComponent<Health>() != null && other.tag.Equals("Player"))
+        if (other.gameObject.GetComponent<Health>() != null && other.gameObject.tag.Equals("Player"))
         {
             countdown -= Time.deltaTime;
             if (countdown <= 0)
@@ -25,7 +26,7 @@ public class ZombieBenaviour : MonoBehaviour
                 countdown = (float).5;
                 //detects if the collision is with a enemy/damagable entity
                 //use GetComponent to access the script and thus the health
-                health = other.GetComponent<Health>();
+                health = other.gameObject.GetComponent<Health>();
                 health.takeDamage(damage);
             }
         }
