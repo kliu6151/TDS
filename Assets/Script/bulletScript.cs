@@ -27,12 +27,10 @@ public class bulletScript : MonoBehaviour
             //use GetComponent to access the script and thus the health
 
             collision.gameObject.GetComponent<Health>().takeDamage(damage);
-            
         }
         //destroys the bullet upon contact with another object/collider
         if (this.gameObject.name == "Bullet2(Clone)")
         {
-            collision.gameObject.GetComponent<BoxCollider>().isTrigger = true;
             current++;
             if (current == pierce)
             {
@@ -45,10 +43,5 @@ public class bulletScript : MonoBehaviour
             Destroy(this.gameObject, 0.000001f);
         }
     }
-    public void OnTriggerExit(Collider other)
-    {
-        other.isTrigger = false;
-    }
-
-
+    
 }
