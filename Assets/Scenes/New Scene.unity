@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 9220140557832034638, guid: 5dfc92234be7df342b09cf7debb652f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.34
+      value: 24.28
       objectReference: {fileID: 0}
     - target: {fileID: 9220140557832034638, guid: 5dfc92234be7df342b09cf7debb652f1,
         type: 3}
@@ -297,7 +297,7 @@ PrefabInstance:
     - target: {fileID: 9220140557832034638, guid: 5dfc92234be7df342b09cf7debb652f1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.58
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 9220140557832034638, guid: 5dfc92234be7df342b09cf7debb652f1,
         type: 3}
@@ -2436,11 +2436,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Explosive Barrel
       objectReference: {fileID: 0}
-    - target: {fileID: 4050955749888883446, guid: 75837d34b6bdd1b4ab92a25715c89a78,
-        type: 3}
-      propertyPath: m_TagString
-      value: Barrel
-      objectReference: {fileID: 0}
     - target: {fileID: 4050955749888883455, guid: 75837d34b6bdd1b4ab92a25715c89a78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2496,11 +2491,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4050955749888883441, guid: 75837d34b6bdd1b4ab92a25715c89a78,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 06a0994971e9ad441b240771f3782f04, type: 2}
+    - target: {fileID: 1000011197043111, guid: 75837d34b6bdd1b4ab92a25715c89a78, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75837d34b6bdd1b4ab92a25715c89a78, type: 3}
 --- !u!1001 &1827219887

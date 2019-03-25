@@ -7,6 +7,7 @@ public class explode : MonoBehaviour
     public float health = 1;
     public float explosionDmg = 50;
     public ParticleSystem particleSystem;
+
     public Renderer render;
     public Collider entity;
     private bool oneTime = true;
@@ -17,27 +18,25 @@ public class explode : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (health <= 0)
+        if(health <= 0)
         {
-            if(other != null)
-            {
-                
-                if(oneTime)
-                {
-                   render.enabled = false;
-                   entity.enabled = false;
-                   other.GetComponent<Health>().takeDamage(explosionDmg);
-                   particleSystem.Play();
-                   oneTime =  !oneTime;
-                }
-            }
-            
+           if(oneTime)
+           {
+              render.enabled = false;
+              entity.enabled = false;
+              particleSystem.Play();
+              oneTime =  !oneTime;
+              if(other.GetComponent<Health>() != null)
+              {
+                other.GetComponent<Health>().takeDamage(explosionDmg);
+              }
+           }
         }
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "bullet")
+        if (collision.gameObject.tag == "bullet" || collision.gameObject.tag == "Barrel")
         {
             health =- collision.gameObject.GetComponent<bulletScript>().damage;
         }

@@ -10,7 +10,7 @@ public class bulletScript : MonoBehaviour
     public int pierce = 2;
     public int current = 0;
     private Health health;
-    private float countdown = (float).05;
+    private float countdown = (float).1;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +22,11 @@ public class bulletScript : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
+        this.gameObject.GetComponent<Collider>().isTrigger = true;
         //destroys the bullet upon contact with another object/collider
         if (this.gameObject.name == "Bullet2(Clone)" && collision.gameObject.tag != "Wall")
         {
-            countdown -= Time.deltaTime;
-            if (countdown <= 0)
-            {
-            }
-            this.gameObject.GetComponent<Collider>().isTrigger = true;
-            Debug.Log("isTrigger");
+            
             current++;
             if (current == pierce)
             {
@@ -52,10 +48,19 @@ public class bulletScript : MonoBehaviour
         }
         
     }
+
     public void OnTriggerExit(Collider other)
-    {       Debug.Log("not Trigger1");
-            this.GetComponent<Collider>().isTrigger = false;     
-            countdown = (float).05;
+    {
+        countdown -= Time.deltaTime;
+        if(countdown <= 0)
+        {
+            materialize();
+            countdown = (float).1;
+        }
     }
 
+    public void materialize()
+    {
+        this.gameObject.GetComponent<Collider>().isTrigger = false;
+    }
 }
