@@ -19,13 +19,17 @@ public class explode : MonoBehaviour
     {
         if (health <= 0)
         {
-            if(oneTime)
+            if(other != null)
             {
-                render.enabled = false;
-                entity.enabled = false;
-                other.GetComponent<Health>().takeDamage(explosionDmg);
-                particleSystem.Play();
-                oneTime =  !oneTime;
+                
+                if(oneTime)
+                {
+                   render.enabled = false;
+                   entity.enabled = false;
+                   other.GetComponent<Health>().takeDamage(explosionDmg);
+                   particleSystem.Play();
+                   oneTime =  !oneTime;
+                }
             }
             
         }
