@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,20 +6,26 @@ public class bulletScript : MonoBehaviour
 {
 
     public float speed;
-    public float damage;
+    public float damage;	
+public float time;
     public int pierce = 2;
     public int current = 0;
     private Health health;
-    private float countdown = (float).1;
+
+    private float countdown;
     // Start is called before the first frame update
     void Start()
     {
+        countdown = time;
         //set speed to "speed" in the direction of "up"
         //the bullet moves where the pointy part is facing (given that it's rotate 90* in the x axis)
         GetComponent<Rigidbody>().velocity = transform.up * speed;
         Destroy(gameObject, 2);
     }
-
+void update()
+{
+//GetComponent<Rigidbody>().XRotation = 90;
+}
     public void OnCollisionEnter(Collision collision)
     {
         this.gameObject.GetComponent<Collider>().isTrigger = true;
@@ -55,7 +61,7 @@ public class bulletScript : MonoBehaviour
         if(countdown <= 0)
         {
             materialize();
-            countdown = (float).1;
+            countdown = time;
         }
     }
 
