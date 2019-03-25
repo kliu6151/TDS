@@ -16,7 +16,7 @@ public class SpawnerBehaviour : MonoBehaviour
     void Update()
     {
         countdown -= Time.deltaTime;
-        if (countdown <= 0)
+        if (countdown <= 0 && Vector3.Distance(GameObject.FindWithTag("Player").transform.position, transform.position)<=10)
         {
             countdown = spawnerDelay;
             GameObject Zombie = Instantiate(Resources.Load<GameObject>("Zombie"), transform.position, transform.rotation) as GameObject;
