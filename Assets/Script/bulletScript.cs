@@ -7,32 +7,35 @@ public class bulletScript : MonoBehaviour
 
     public float speed;
     public float damage;	
-public float time;
+	public float time = (float).1;
     public int pierce = 2;
     public int current = 0;
     private Health health;
+	private bool trigger = true;
 
     private float countdown;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         countdown = time;
         //set speed to "speed" in the direction of "up"
         //the bullet moves where the pointy part is facing (given that it's rotate 90* in the x axis)
         GetComponent<Rigidbody>().velocity = transform.up * speed;
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 10);
     }
-void update()
-{
-//GetComponent<Rigidbody>().XRotation = 90;
-}
-    public void OnCollisionEnter(Collision collision)
+	public void update()
+	{
+		GetComponent<Rigidbody>().velocity = transform.up * speed;
+	}
+    public void OnTriggerEnter(Collider other)
     {
-        this.gameObject.GetComponent<Collider>().isTrigger = true;
+		if(other.gameObject.tag == "Barrel")
+		{
+			this.GetComponent<Collider>().isTrigger = !trigger;
+		}
         //destroys the bullet upon contact with another object/collider
-        if (this.gameObject.name == "Bullet2(Clone)" && collision.gameObject.tag != "Wall")
+        if (this.gameObject.name == "Bullet2(Clone)" && other.gameObject.tag != "Wall")
         {
-            
             current++;
             if (current == pierce)
             {
@@ -44,17 +47,17 @@ void update()
         {
             Destroy(this.gameObject, 0.0001f);
         }
-        if (collision.gameObject.GetComponent<Health>() != null)
+        if (other.GetComponent<Health>() != null)
         {
             //detects if the collision is with a enemy/damagable entity
             //use GetComponent to access the script and thus the health
 
-            collision.gameObject.GetComponent<Health>().takeDamage(damage);
+            other.GetComponent<Health>().takeDamage(damage);
             
         }
         
     }
-
+/*
     public void OnTriggerExit(Collider other)
     {
         countdown -= Time.deltaTime;
@@ -69,4 +72,5 @@ void update()
     {
         this.gameObject.GetComponent<Collider>().isTrigger = false;
     }
+*/
 }

@@ -6,7 +6,6 @@ public class Health : MonoBehaviour
     public float hp = 100;
     private float startHealth;
     public Image healthBar;
-
     public void Start()
     {
         startHealth = hp;
@@ -21,7 +20,7 @@ public class Health : MonoBehaviour
     public void Update()
     {
         if (hp <= 0)
-        {
+        { 
             Destroy(gameObject, 0.001f);
         }
     }

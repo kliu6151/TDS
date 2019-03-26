@@ -122,9 +122,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   explosionDmg: 50
+  force: 0
   particleSystem: {fileID: 198000012204478471}
   render: {fileID: 4050955749888883441}
-  entity: {fileID: 4050955749888883442}
+  collider: {fileID: 4050955749888883442}
 --- !u!1001 &601560033
 PrefabInstance:
   m_ObjectHideFlags: 0

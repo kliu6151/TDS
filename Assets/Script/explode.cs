@@ -6,13 +6,13 @@ public class explode : MonoBehaviour
 {
     public float health = 1;
     public float explosionDmg = 50;
+	public float force;
     public ParticleSystem particleSystem;
-
-    public Renderer render;
-    public Collider entity;
+	public Renderer render;
+	public Collider collider;
     private bool oneTime = true;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
     }
 
@@ -22,10 +22,9 @@ public class explode : MonoBehaviour
         {
            if(oneTime)
            {
-              render.enabled = false;
-              entity.enabled = false;
               particleSystem.Play();
-              oneTime =  !oneTime;
+              oneTime =  false;
+			 // GetComponent<Rigidbody>().AddExplosionForce(force, GetComponent<Rigidbody>().centerOfMass, 5, 1, ForceMode.Impulse);
               if(other.GetComponent<Health>() != null)
               {
                 other.GetComponent<Health>().takeDamage(explosionDmg);
@@ -33,7 +32,6 @@ public class explode : MonoBehaviour
            }
         }
     }
-
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "bullet" || collision.gameObject.tag == "Barrel")
@@ -42,7 +40,10 @@ public class explode : MonoBehaviour
         }
         if (health <= 0)
         {
+			render.enabled = false;
+			collider.enabled = false;
             Destroy(gameObject, 4f);
         }
     }
+
 }

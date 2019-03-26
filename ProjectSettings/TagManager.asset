@@ -10,7 +10,6 @@ TagManager:
   - Wall
   - bullet
   - Barrel
-  - Gun
   layers:
   - Default
   - TransparentFX

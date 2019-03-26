@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 9220140557832034639}
   - component: {fileID: 9220140557832034636}
   - component: {fileID: 9220140557832034634}
+  - component: {fileID: 6173612118788832941}
   - component: {fileID: 9220140557832034632}
   - component: {fileID: 9220140557832034633}
   - component: {fileID: 9220140557832034646}
-  - component: {fileID: 6173612118788832941}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Zombie
@@ -99,6 +99,22 @@ MonoBehaviour:
   player: {fileID: 0}
   damage: 5
   countdown: 0.5
+--- !u!114 &6173612118788832941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220140557832034647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8eddfe11cd730b4c94adf79bc968e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  healthBar: {fileID: 9220140558999852573}
+  render: {fileID: 9220140557832034636}
+  collider: {fileID: 9220140557832034646}
 --- !u!195 &9220140557832034632
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -150,20 +166,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6173612118788832941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9220140557832034647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8eddfe11cd730b4c94adf79bc968e2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 100
-  healthBar: {fileID: 9220140558999852573}
 --- !u!1 &9220140558999852571
 GameObject:
   m_ObjectHideFlags: 0
