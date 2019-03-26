@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Shooting : MonoBehaviour
     public float bulletDelay;
     public float ammoMax;
     public Transform firePoint;
+    public Image ammoBar;
 
     private float currentAmmo;
     private float countdown;
@@ -32,6 +34,7 @@ public class Shooting : MonoBehaviour
             if (countdown <= 0 && currentAmmo > 0)
             {
                 currentAmmo--;
+		
                 countdown = bulletDelay;
                 bulletScript bulletCloning = Instantiate(bullet, firePoint.position, firePoint.rotation) as bulletScript;
                 bulletCloning.speed = bulletSpeed;  
@@ -39,5 +42,6 @@ public class Shooting : MonoBehaviour
         }
         else
             countdown = 0;
+	ammoBar.fillAmount = currentAmmo/ ammoMax;
     }
 }

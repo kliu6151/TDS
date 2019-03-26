@@ -12,7 +12,7 @@ public class GunSwitching : MonoBehaviour
     {
         PrefabList.Add(GameObject.FindWithTag("Gun1"));
         PrefabList.Add(GameObject.FindWithTag("Gun2"));
-        //PrefabList.Add(GameObject.FindWithTag("PutTagOfNewGun"));
+        //PrefabList.Add(GameObject.FindWithTag("Gun3"));
         for (int i = 0; i<PrefabList.Count; i++)
         {
             PrefabList[i].SetActive(false);
