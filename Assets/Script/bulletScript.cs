@@ -11,7 +11,7 @@ public class bulletScript : MonoBehaviour
     public int pierce = 2;
     public int current = 0;
     private Health health;
-	private bool trigger = true;
+    private bool trigger = true;
 
     private float countdown;
     // Start is called before the first frame update
@@ -29,10 +29,11 @@ public class bulletScript : MonoBehaviour
 	}
     public void OnTriggerEnter(Collider other)
     {
-		if(other.gameObject.tag == "Barrel")
-		{
-			this.GetComponent<Collider>().isTrigger = !trigger;
-		}
+        if(other.gameObject.tag == "Barrel")
+        {
+                this.GetComponent<Collider>().isTrigger = trigger;
+		trigger = !trigger;
+        }
         //destroys the bullet upon contact with another object/collider
         if (this.gameObject.name == "Bullet2(Clone)" && other.gameObject.tag != "Wall")
         {
