@@ -126,6 +126,7 @@ MonoBehaviour:
   particleSystem: {fileID: 198000012204478471}
   render: {fileID: 4050955749888883441}
   collider: {fileID: 4050955749888883442}
+  range: {fileID: 4050955749888883443}
 --- !u!1001 &601560033
 PrefabInstance:
   m_ObjectHideFlags: 0
