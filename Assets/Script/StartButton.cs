@@ -23,13 +23,13 @@ public class StartButton : MonoBehaviour
             {
                 if (hit.collider.gameObject.name == "Start")
                 {
-                    SceneManager.LoadScene("New Scene");
+                    SceneManager.LoadScene("Map2");
                 }
             }
         }
     }
     public void startScene()
     {
-        SceneManager.LoadScene("New Scene");
+        SceneManager.LoadScene("Map2");
     }
 }
