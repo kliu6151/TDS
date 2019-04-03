@@ -6,7 +6,6 @@ public class explode : MonoBehaviour
 {
     public float health = 1;
     public float explosionDmg = 50;
-    public float force;
     public ParticleSystem particleSystem;
     public Renderer render;
     public Collider collider;

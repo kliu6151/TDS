@@ -31,8 +31,7 @@ public class bulletScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Barrel")
         {
-            this.GetComponent<Collider>().isTrigger = trigger;
-		    trigger = !trigger;
+            this.GetComponent<Collider>().isTrigger = false;
         }
         //destroys the bullet upon contact with another object/collider
         if (this.gameObject.name == "Bullet2(Clone)" && other.gameObject.tag != "Wall")
@@ -59,20 +58,9 @@ public class bulletScript : MonoBehaviour
 
     }
 
-    /*
-        public void OnTriggerExit(Collider other)
+        public void OnCollisionEnter(Collision collision)
         {
-            countdown -= Time.deltaTime;
-            if(countdown <= 0)
-            {
-                materialize();
-                countdown = time;
-            }
+            this.gameObject.GetComponent<Collider>().isTrigger = true;
         }
 
-        public void materialize()
-        {
-            this.gameObject.GetComponent<Collider>().isTrigger = false;
-        }
-    */
 }
