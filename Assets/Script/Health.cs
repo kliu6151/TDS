@@ -14,19 +14,8 @@ public class Health : MonoBehaviour
 
     public void takeDamage(float amount)
     {
-        if(this.gameObject.tag=="Wall")
-        {
-            
-            if (zombieDeath >= 10) {
-                zombieDeath = 0;
-                this.gameObject.tag = "Wall2";
-            }
-        }
-        else
-        {
-            hp -= amount;
-            healthBar.fillAmount = hp / startHealth;
-        }
+        hp -= amount;
+        healthBar.fillAmount = hp / startHealth;
     }
 
     public void Update()
@@ -34,11 +23,6 @@ public class Health : MonoBehaviour
         if (hp <= 0)
         { 
             Destroy(gameObject, 0.001f);
-            
-            if(this.gameObject.tag == "Zombie")
-            {
-                zombieDeath++;
-            }
         }
     }
 }

@@ -11,6 +11,7 @@ public class bulletScript : MonoBehaviour
     public int pierce = 2;
     public int current = 0;
     private Health health;
+    private bool trigger = true;
 
     private float countdown;
     // Start is called before the first frame update
@@ -22,27 +23,19 @@ public class bulletScript : MonoBehaviour
         GetComponent<Rigidbody>().velocity = transform.up * speed;
         Destroy(gameObject, 10);
     }
-    public void update()
-    {
-        GetComponent<Rigidbody>().velocity = transform.up * speed;
-    }
+	public void update()
+	{
+		GetComponent<Rigidbody>().velocity = transform.up * speed;
+	}
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Barrel")
+        if(other.gameObject.tag == "Barrel")
         {
-            this.GetComponent<Collider>().isTrigger = false;
-        }
-
-        if (other.GetComponent<Health>() != null)
-        {
-            //detects if the collision is with a enemy/damagable entity
-            //use GetComponent to access the script and thus the health
-
-            other.GetComponent<Health>().takeDamage(damage);
-            
+            this.GetComponent<Collider>().isTrigger = trigger;
+		    trigger = !trigger;
         }
         //destroys the bullet upon contact with another object/collider
-        if (this.gameObject.name == "Bullet2(Clone)" && other.tag != "Wall")
+        if (this.gameObject.name == "Bullet2(Clone)" && other.gameObject.tag != "Wall")
         {
             current++;
             if (current == pierce)
@@ -53,13 +46,33 @@ public class bulletScript : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject, 0.1f); 
+            Destroy(this.gameObject, 0.0001f);
         }
-        
-    } 
-    public void OnCollisionEnter(Collision collision)
-    {
-       this.GetComponent<Collider>().isTrigger = true;
+        if (other.GetComponent<Health>() != null)
+        {
+            //detects if the collision is with a enemy/damagable entity
+            //use GetComponent to access the script and thus the health
+
+            other.GetComponent<Health>().takeDamage(damage);
+           
+        }
+
     }
 
+    /*
+        public void OnTriggerExit(Collider other)
+        {
+            countdown -= Time.deltaTime;
+            if(countdown <= 0)
+            {
+                materialize();
+                countdown = time;
+            }
+        }
+
+        public void materialize()
+        {
+            this.gameObject.GetComponent<Collider>().isTrigger = false;
+        }
+    */
 }
