@@ -7,12 +7,10 @@ public class bulletScript : MonoBehaviour
 
     public float speed;
     public float damage;	
-	public float time = (float).1;
+    public float time = (float).1;
     public int pierce = 2;
     public int current = 0;
     private Health health;
-    private bool trigger = true;
-
     private float countdown;
     // Start is called before the first frame update
     public void Start()
@@ -45,7 +43,7 @@ public class bulletScript : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject, 0.0001f);
+            Destroy(this.gameObject, 0.01f);
         }
         if (other.GetComponent<Health>() != null)
         {
@@ -60,7 +58,12 @@ public class bulletScript : MonoBehaviour
 
         public void OnCollisionEnter(Collision collision)
         {
-            this.gameObject.GetComponent<Collider>().isTrigger = true;
+            countdown -= Time.deltaTime;
+            if (countdown <= 0)
+            {
+                countdown = time;
+                this.gameObject.GetComponent<Collider>().isTrigger = true;
+	    }
         }
 
 }
