@@ -31,19 +31,22 @@ public class bulletScript : MonoBehaviour
         {
             this.GetComponent<Collider>().isTrigger = false;
         }
-        //destroys the bullet upon contact with another object/collider
+	if(other.gameObject.tag == "Wall")
+	{
+		Destroy(this.gameObject, 0.01f);
+	}
         if (this.gameObject.name == "Bullet2(Clone)" && other.gameObject.tag != "Wall")
         {
             current++;
             if (current == pierce)
             {
                 current = 0;
-                Destroy(this.gameObject, 0.01f);
+                Destroy(this.gameObject, 0.1f);
             }
         }
         else
         {
-            Destroy(this.gameObject, 0.01f);
+            Destroy(this.gameObject, 0.1f);
         }
         if (other.GetComponent<Health>() != null)
         {

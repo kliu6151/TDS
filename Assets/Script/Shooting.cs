@@ -18,16 +18,10 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-        currentAmmo = ammoMax;
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            currentAmmo = ammoMax;
-            countdown = 1000;
-        }
         if (isFiring)
         {
             countdown -= Time.deltaTime;
@@ -45,3 +39,4 @@ public class Shooting : MonoBehaviour
 	ammoBar.fillAmount = currentAmmo/ ammoMax;
     }
 }
+
