@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Reload : MonoBehaviour
 {
-    private float currentAmmo;
-    public float ammoMax;
+public Shooting shooting;
+public bool isReloading;
     private float countdown;
     void Start()
     {
-        currentAmmo = ammoMax;
+	shooting.loaded();
+	isReloading = false;
     }
 
     // Update is called once per frame
@@ -17,16 +18,24 @@ public class Reload : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
 	{
-	    
-	    StartCoroutine(Reloading());
+	startReloading();
 	    
 	}
     }
+
+	public void startReloading()
+	{
+		StartCoroutine(Reloading());
+	}
+
     IEnumerator Reloading()
     {
-	    Debug.Log("HI");
-	    yield return new WaitForSeconds(3f);
-            currentAmmo = ammoMax;
-            countdown = 1000;
+	shooting.enabled = false;
+	isReloading = true;
+	yield return new WaitForSeconds(3f);
+	shooting.enabled = true;
+	shooting.loaded();
+        countdown = 1000;
+	isReloading = false;
     }
 }

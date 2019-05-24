@@ -18,7 +18,13 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
+	loaded();
     }
+
+public void loaded()
+{
+currentAmmo = ammoMax;
+}
     // Update is called once per frame
     void Update()
     {

@@ -35,6 +35,8 @@ public class GunSwitching : MonoBehaviour
                 selected = 0;
             }
             PrefabList[selected].SetActive(true);
+	if(PrefabList[selected].GetComponent<Reload>().isReloading)
+	{PrefabList[selected].GetComponent<Reload>().startReloading();}
         }
     }
 }
