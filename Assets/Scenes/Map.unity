@@ -2997,7 +2997,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e6fa9f3645cd3449f195a432ffccaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoMax: 0
+  shooting: {fileID: 0}
+  time: 0
+  isReloading: 0
 --- !u!4 &707111066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4050955749888883455, guid: 75837d34b6bdd1b4ab92a25715c89a78,
@@ -6424,10 +6426,35 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7374979604972155870, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374979604972155879, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8727777316593598223, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374979605056580312, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
+        type: 3}
+      propertyPath: isFiring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374979605056580312, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
+        type: 3}
+      propertyPath: ammoMax
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374979603460507120, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
+        type: 3}
+      propertyPath: ammoMax
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7374979604817983281, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
         type: 3}
@@ -6444,15 +6471,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7374979605056580312, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
+    - target: {fileID: 2977544738130068382, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
         type: 3}
-      propertyPath: isFiring
-      value: 0
+      propertyPath: m_Color.r
+      value: 0.27450982
       objectReference: {fileID: 0}
-    - target: {fileID: 7374979605056580312, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
+    - target: {fileID: 2977544738130068382, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
         type: 3}
-      propertyPath: ammoMax
-      value: 25
+      propertyPath: m_Color.g
+      value: 0.43529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 2977544738130068382, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7374979604817983280, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
         type: 3}
@@ -6524,21 +6556,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1481227334}
-    - target: {fileID: 7374979604972155870, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374979604972155879, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
-        type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374979603460507120, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
-        type: 3}
-      propertyPath: ammoMax
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c70b5bdf84fc514d9db847fb0af8d0b, type: 3}
 --- !u!4 &1363433530 stripped
@@ -11435,6 +11452,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1071641046}
     m_Modifications:
+    - target: {fileID: 8839111613569620241, guid: 76d25dce58a743c4db9ec4b4aa912dd1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7718827515419529573, guid: 76d25dce58a743c4db9ec4b4aa912dd1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11494,11 +11516,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall
-      objectReference: {fileID: 0}
-    - target: {fileID: 8839111613569620241, guid: 76d25dce58a743c4db9ec4b4aa912dd1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76d25dce58a743c4db9ec4b4aa912dd1, type: 3}

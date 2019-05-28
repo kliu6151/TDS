@@ -5,12 +5,12 @@ using UnityEngine;
 public class Reload : MonoBehaviour
 {
 public Shooting shooting;
-public bool isReloading;
+public float time;
+public bool isReloading = false;
     private float countdown;
     void Start()
     {
-	shooting.loaded();
-	isReloading = false;
+	shooting = this.gameObject.GetComponent<Shooting>();
     }
 
     // Update is called once per frame
@@ -19,7 +19,6 @@ public bool isReloading;
         if (Input.GetKeyDown(KeyCode.R))
 	{
 	startReloading();
-	    
 	}
     }
 
@@ -27,15 +26,18 @@ public bool isReloading;
 	{
 		StartCoroutine(Reloading());
 	}
+public void status(bool boolean)
+{
+
+	isReloading = boolean;
+	shooting.ammoBarUpdate(isReloading);
+}
 
     IEnumerator Reloading()
     {
-	shooting.enabled = false;
-	isReloading = true;
-	yield return new WaitForSeconds(3f);
-	shooting.enabled = true;
-	shooting.loaded();
-        countdown = 1000;
-	isReloading = false;
+	status(true);
+	yield return new WaitForSeconds(time);
+	shooting.load();
+	status(false);
     }
 }
