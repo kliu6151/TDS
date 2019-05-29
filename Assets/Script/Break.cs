@@ -5,6 +5,7 @@ using UnityEngine;
 public class Break : MonoBehaviour
 {
     public GameObject[] zombies;
+    public int zombLimit = 10;
     private Renderer rend;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class Break : MonoBehaviour
     void Update()
     {
         zombies = GameObject.FindGameObjectsWithTag("Zombie");
-        if(zombies.Length <= 10)
+        if(zombies.Length <= zombLimit )
         {
         	this.GetComponent<Health>().enabled = true;
         	rend.material.SetColor("_Color", Color.green);

@@ -58,8 +58,9 @@ if(!loading)
        	 }
        	 else
        	     countdown = 0;
-	ammoBar.fillAmount = currentAmmo/ ammoMax;
+	 ammoBar.fillAmount = currentAmmo/ ammoMax;
     }
+	ammoBar.fillAmount = currentAmmo/ ammoMax;
 }
 }
 

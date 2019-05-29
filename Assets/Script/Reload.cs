@@ -18,26 +18,21 @@ public bool isReloading = false;
     {
         if (Input.GetKeyDown(KeyCode.R))
 	{
-	startReloading();
+		startReloading();
 	}
+	shooting.ammoBarUpdate(isReloading);
     }
 
 	public void startReloading()
 	{
 		StartCoroutine(Reloading());
 	}
-public void status(bool boolean)
-{
-
-	isReloading = boolean;
-	shooting.ammoBarUpdate(isReloading);
-}
 
     IEnumerator Reloading()
     {
-	status(true);
+	isReloading = true;
 	yield return new WaitForSeconds(time);
 	shooting.load();
-	status(false);
+	isReloading = false;
     }
 }
