@@ -46,7 +46,7 @@ public class bulletScript : MonoBehaviour
         }
         else
         {
-            Destroy(this.gameObject, 0.01f);
+            Destroy(this.gameObject, 0.05f);
         }
         if (other.GetComponent<Health>() != null)
         {

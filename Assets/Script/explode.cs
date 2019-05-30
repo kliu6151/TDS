@@ -10,7 +10,8 @@ public class explode : MonoBehaviour
     public Renderer render;
     public Collider collider;
     public Collider range;
-    private bool oneTime = true;
+    public List <Collider> hits = new List<Collider>();
+    private bool oneTime = false;
     // Start is called before the first frame update
     public void Start()
     {
@@ -19,18 +20,10 @@ public class explode : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if(health <= 0)
-        { 
-           if(oneTime)
-           {
-               particleSystem.Play();
-               oneTime =  false;
-               if(other.GetComponent<Health>() != null)
-               {
-                  other.GetComponent<Health>().takeDamage(explosionDmg);
-               }
-               range.enabled = false;
-           }
+        if(!hits.Contains(other))
+        {
+            hits.Add(other);
+            damage(other);
         }
     }
     void OnCollisionEnter(Collision collision)
@@ -51,7 +44,25 @@ public class explode : MonoBehaviour
         render.enabled = false;        
         collider.enabled = false;
         range.enabled = true;
+        particleSystem.Play();
+	Destroy(range, .1f);
         Destroy(gameObject, 4f);
+    }
+
+    public void damage(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            if(oneTime)
+            {
+                return;
+            }
+            oneTime = true;
+        }
+        if(other.gameObject.GetComponent<Health>() != null)
+        {
+            other.gameObject.GetComponent<Health>().takeDamage(explosionDmg);
+        }
     }
 
 }

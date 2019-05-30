@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     {
         if (hp <= 0)
         { 
-            Destroy(gameObject, 0.001f);
+            Destroy(gameObject, 0.1f);
         }
     }
 }
