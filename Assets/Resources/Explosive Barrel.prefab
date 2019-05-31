@@ -106,7 +106,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 2.5
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &4050955749888883444
 MonoBehaviour:
@@ -126,6 +126,7 @@ MonoBehaviour:
   render: {fileID: 4050955749888883441}
   collider: {fileID: 4050955749888883442}
   range: {fileID: 4050955749888883443}
+  hits: []
 --- !u!1001 &601560033
 PrefabInstance:
   m_ObjectHideFlags: 0

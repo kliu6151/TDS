@@ -663,7 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shooting: {fileID: 7374979603460507120}
-  time: 5
+  time: 3
   isReloading: 0
 --- !u!1 &7374979603869565893
 GameObject:
@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shooting: {fileID: 7374979605056580312}
-  time: 3
+  time: 1
   isReloading: 0
 --- !u!1 &7374979605531597295
 GameObject:
