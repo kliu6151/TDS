@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class Reload : MonoBehaviour
 {
-public Shooting shooting;
-public float time;
-public bool isReloading = false;
+    public Shooting shooting;
+    public PlayerMovement movement;
+    public float time;
+    public bool isReloading = false;
     private float countdown;
     void Start()
     {
-	shooting = this.gameObject.GetComponent<Shooting>();
+	    shooting = this.gameObject.GetComponent<Shooting>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
-	{
+	    {
 		startReloading();
-	}
-	shooting.ammoBarUpdate(isReloading);
+	    }
+	    shooting.ammoBarUpdate(isReloading);
+        movement.slowDown(isReloading);
     }
 
 	public void startReloading()
@@ -30,9 +32,9 @@ public bool isReloading = false;
 
     IEnumerator Reloading()
     {
-	isReloading = true;
-	yield return new WaitForSeconds(time);
-	shooting.load();
-	isReloading = false;
+	    isReloading = true;
+	    yield return new WaitForSeconds(time);
+	    shooting.load();
+	    isReloading = false;
     }
 }

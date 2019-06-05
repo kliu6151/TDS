@@ -663,6 +663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shooting: {fileID: 7374979603460507120}
+  movement: {fileID: 7374979604972155869}
   time: 3
   isReloading: 0
 --- !u!1 &7374979603869565893
@@ -1080,6 +1081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shooting: {fileID: 7374979605056580312}
+  movement: {fileID: 7374979604972155869}
   time: 1
   isReloading: 0
 --- !u!1 &7374979605531597295

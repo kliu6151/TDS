@@ -52,6 +52,18 @@ public class PlayerMovement : MonoBehaviour {
     private void FixedUpdate()
     {
         playerRigidbody.velocity = moveVelocity;
+
     }
 
+    public void slowDown(bool reloading)
+    {
+        if(reloading)
+        {
+            moveSpeed = 3;
+        }
+        else
+        {
+            moveSpeed = 5;
+        }
+    }
 }
