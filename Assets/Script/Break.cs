@@ -25,6 +25,7 @@ public class Break : MonoBehaviour
         else
         {
         	this.GetComponent<Health>().enabled = false;
+        	this.GetComponent<Health>().hp = 100;
         	rend.material.SetColor("_Color", Color.red);
         }
     }
