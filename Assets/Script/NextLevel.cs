@@ -9,15 +9,16 @@ public class NextLevel : MonoBehaviour
     public static int level = 1;
     public System.Boolean manualPick;
     public int levelChoice;
+    public System.Boolean disabled;
     void Start()
     {
-        
+    	   
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindWithTag("Zombie") == null)
+        if (!disabled && GameObject.FindWithTag("Zombie") == null)
         {
             level++;
             if (manualPick)
@@ -26,5 +27,12 @@ public class NextLevel : MonoBehaviour
             }
             SceneManager.LoadScene(level);
         }
+    }
+    public void next(){
+	if (manualPick)
+	{
+		level = levelChoice;
+	}
+        SceneManager.LoadScene(level);
     }
 }

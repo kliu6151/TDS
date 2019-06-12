@@ -11,7 +11,6 @@ public class Reload : MonoBehaviour
     private float countdown;
     void Start()
     {
-	    shooting = this.gameObject.GetComponent<Shooting>();
     }
 
     // Update is called once per frame
@@ -21,7 +20,10 @@ public class Reload : MonoBehaviour
 	    {
 		startReloading();
 	    }
+	if(shooting.enabled)
+	{
 	    shooting.ammoBarUpdate(isReloading);
+	}
         movement.slowDown(isReloading);
     }
 

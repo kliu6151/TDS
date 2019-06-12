@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     public float hp = 100;
-    private float startHealth;
     public Image healthBar;
-    public static int zombieDeath = 0;
+    private float startHealth;
+    private bool dead = false;
     public void Start()
     {
         startHealth = hp;
@@ -22,6 +22,11 @@ public class Health : MonoBehaviour
     {
         if (hp <= 0)
         { 
+            if(this.gameObject.tag == "Zombie" && !dead)
+            {
+                GlobalVariables.highscore += 1;
+		dead = true;
+            }
             Destroy(gameObject, 0.1f);
         }
     }

@@ -21,46 +21,46 @@ public class Shooting : MonoBehaviour
 	load();
     }
 
-public void load()
-{
-currentAmmo = ammoMax;
-}
-public void ammoBarUpdate(bool boolean)
-{
-	if(boolean)
+	public void load()
 	{
-		ammoBar.color = Color.yellow;
+		currentAmmo = ammoMax;
 	}
-	else
+
+	public void ammoBarUpdate(bool boolean)
 	{
-		ammoBar.color = Color.blue;
+		if(boolean)
+		{
+			ammoBar.color = Color.yellow;
+		}
+		else
+		{
+			ammoBar.color = Color.blue;
+		}
+		loading = boolean;
 	}
-	loading = boolean;
-}
 
 
     // Update is called once per frame
     void Update()
     {
-if(!loading)
-{
-	if (isFiring)
-	        {
-	            countdown -= Time.deltaTime;
-	            if (countdown <= 0 && currentAmmo > 0)
-	            {
-       	         currentAmmo--;
-			
-       	         countdown = bulletDelay;
-       	         bulletScript bulletCloning = Instantiate(bullet, firePoint.position, firePoint.rotation) as bulletScript;
-       	         bulletCloning.speed = bulletSpeed;  
-       	     }
-       	 }
-       	 else
-       	     countdown = 0;
-	 ammoBar.fillAmount = currentAmmo/ ammoMax;
-    }
+	if(!loading)
+	{
+		if (isFiring)
+	        {		
+			countdown -= Time.deltaTime;
+       	     		if (countdown <= 0 && currentAmmo > 0)
+       	     		{
+       	     			currentAmmo--;
+       	     			countdown = bulletDelay;
+       	     			bulletScript bulletCloning = Instantiate(bullet, firePoint.position, firePoint.rotation) as bulletScript;
+       	         		bulletCloning.speed = bulletSpeed;  
+       	     		}
+       	 	}
+       	 	else
+		countdown = 0;
+		ammoBar.fillAmount = currentAmmo/ ammoMax;
+	}
 	ammoBar.fillAmount = currentAmmo/ ammoMax;
-}
+    }
 }
 

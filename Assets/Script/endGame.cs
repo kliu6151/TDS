@@ -17,7 +17,12 @@ public class endGame : MonoBehaviour
         hp = this.GetComponent<Health>().hp;
         if(hp <= 0)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
         }
     }
+}
+
+public static class GlobalVariables
+{
+	public static float highscore = 0;
 }
