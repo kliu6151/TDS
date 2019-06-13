@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     public void Start()
     {
         startHealth = hp;
+        dead = false;
     }
 
     public void takeDamage(float amount)
@@ -22,10 +23,10 @@ public class Health : MonoBehaviour
     {
         if (hp <= 0)
         { 
-            if(this.gameObject.tag == "Zombie" && !dead)
+            if((this.gameObject.tag == "Zombie") && (!dead))
             {
-                GlobalVariables.highscore += 1;
-		dead = true;
+                GlobalVariables.highscore = GlobalVariables.highscore + 1;
+                dead = true;
             }
             Destroy(gameObject, 0.1f);
         }

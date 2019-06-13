@@ -9,6 +9,7 @@ public class endGame : MonoBehaviour
     private float hp;
     void Start()
     {
+        GlobalVariables.highscore = 0;
     }
 
     // Update is called once per frame

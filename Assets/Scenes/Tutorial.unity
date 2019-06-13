@@ -162,7 +162,7 @@ PrefabInstance:
     - target: {fileID: 4050955749888883455, guid: 75837d34b6bdd1b4ab92a25715c89a78,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4050955749888883455, guid: 75837d34b6bdd1b4ab92a25715c89a78,
         type: 3}
@@ -449,9 +449,11 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312571742}
-  m_Text: "There will be barrels in the game.\nThey will explode when you shoot them\nWhen
-    they explode, they will deal \ndamage to both the player and zombie in the red
-    circle."
+  m_Text: 'There will be explosive barrels in the game.
+
+    Anything in the red area will take damage
+
+    when it expldoes.'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -510,7 +512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312571742}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 42.43, y: -0.50004196, z: -6.874367}
+  m_LocalPosition: {x: 44.52, y: -0.5, z: -8.03}
   m_LocalScale: {x: 0.06666667, y: 0.0666667, z: 0.0666667}
   m_Children: []
   m_Father: {fileID: 459853032}
@@ -557,10 +559,9 @@ Transform:
   - {fileID: 1497357113}
   - {fileID: 1986683990}
   - {fileID: 1810684921}
-  - {fileID: 1337529665}
   - {fileID: 2144521055}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &515082089 stripped
 Transform:
@@ -706,7 +707,7 @@ PrefabInstance:
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: 8.75
       objectReference: {fileID: 0}
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
@@ -716,7 +717,7 @@ PrefabInstance:
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5
+      value: 1.36
       objectReference: {fileID: 0}
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
@@ -741,7 +742,7 @@ PrefabInstance:
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
@@ -852,7 +853,7 @@ PrefabInstance:
     - target: {fileID: 9220140557832034638, guid: 5dfc92234be7df342b09cf7debb652f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.04
+      value: -3.95
       objectReference: {fileID: 0}
     - target: {fileID: 9220140557832034638, guid: 5dfc92234be7df342b09cf7debb652f1,
         type: 3}
@@ -862,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 9220140557832034638, guid: 5dfc92234be7df342b09cf7debb652f1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.56
+      value: 2.61
       objectReference: {fileID: 0}
     - target: {fileID: 9220140557832034638, guid: 5dfc92234be7df342b09cf7debb652f1,
         type: 3}
@@ -1024,7 +1025,7 @@ PrefabInstance:
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.5
+      value: 34.47
       objectReference: {fileID: 0}
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
@@ -1034,7 +1035,7 @@ PrefabInstance:
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25
+      value: -25.47
       objectReference: {fileID: 0}
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
@@ -1059,7 +1060,7 @@ PrefabInstance:
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8453362310896278881, guid: 37b0e8d51b533ff4c9fd81c35b107b8b,
         type: 3}
@@ -1300,85 +1301,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177238679}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1243522416
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6599602435699351816, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_Name
-      value: ZombieSpawner (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 34.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -18.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3320932777949177521, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6355892969377664554, guid: 805053e58c95c8f4584c06f6711c31da,
-        type: 3}
-      propertyPath: active
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 805053e58c95c8f4584c06f6711c31da, type: 3}
 --- !u!1 &1272386928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,8 +1404,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337529662}
-  m_Text: "Some walls are breakable.\nThe walls in green are breakable. \nThe breakable
-    walls will turn red when there are too many zombies in the area."
+  m_Text: 'Green walls are breakable.
+
+    They will turn red when too many zombies in the area.'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1541,12 +1464,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337529662}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.69, y: -0, z: -4.5}
-  m_LocalScale: {x: 0.06666667, y: 0.0666667, z: 0.0666667}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -558.8, y: 254.8, z: -7.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 459853032}
-  m_RootOrder: 14
+  m_Father: {fileID: 2144521055}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &1410672133 stripped
 Transform:
@@ -1580,9 +1503,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421070445}
-  m_Text: 'Some spawners are active all the time.
-
-    They will be invisible in game.'
+  m_Text: They will be invisible in game.
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1641,7 +1562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421070445}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 44.910706, y: -0.50004196, z: 0.8256326}
+  m_LocalPosition: {x: 47.42, y: -0.5, z: -1.11}
   m_LocalScale: {x: 0.06666667, y: 0.0666667, z: 0.0666667}
   m_Children: []
   m_Father: {fileID: 459853032}
@@ -1711,7 +1632,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497357110
 GameObject:
@@ -1854,7 +1775,7 @@ PrefabInstance:
     - target: {fileID: 4050955749888883455, guid: 75837d34b6bdd1b4ab92a25715c89a78,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4050955749888883455, guid: 75837d34b6bdd1b4ab92a25715c89a78,
         type: 3}
@@ -1933,7 +1854,7 @@ PrefabInstance:
     - target: {fileID: 7374979604972155867, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7374979604972155867, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
         type: 3}
@@ -1954,6 +1875,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7374979604972155871, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
+        type: 3}
+      propertyPath: hp
+      value: 10000000
       objectReference: {fileID: 0}
     - target: {fileID: 6620430610650436416, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
         type: 3}
@@ -1979,11 +1905,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UiScaleMode
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7374979604972155871, guid: 5c70b5bdf84fc514d9db847fb0af8d0b,
-        type: 3}
-      propertyPath: hp
-      value: 10000000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c70b5bdf84fc514d9db847fb0af8d0b, type: 3}
@@ -2098,11 +2019,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810684918}
-  m_Text: 'Press space to rotate between guns.
-
-    The guns have different properties.
-
-'
+  m_Text: "Press space to rotate\n between different guns."
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -2161,7 +2078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810684918}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 17.17, y: -0.50004196, z: 1.2156326}
+  m_LocalPosition: {x: 29.8, y: -0.50004196, z: 2.23}
   m_LocalScale: {x: 0.06666667, y: 0.0666667, z: 0.0666667}
   m_Children: []
   m_Father: {fileID: 459853032}
@@ -2182,7 +2099,7 @@ PrefabInstance:
     - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.68
+      value: 34.22
       objectReference: {fileID: 0}
     - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
         type: 3}
@@ -2192,7 +2109,7 @@ PrefabInstance:
     - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 2908991073981738314, guid: 805053e58c95c8f4584c06f6711c31da,
         type: 3}
@@ -2411,7 +2328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912145477}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.17, y: 0, z: 1.02}
+  m_LocalPosition: {x: 9.31, y: 0, z: 1.64}
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2502,7 +2419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917524955}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.0807076, y: -0.5, z: 5.64}
+  m_LocalPosition: {x: 10.51, y: -0.5, z: 4.74}
   m_LocalScale: {x: 0.06666667, y: 0.0666667, z: 0.0666667}
   m_Children: []
   m_Father: {fileID: 459853032}
@@ -2536,7 +2453,7 @@ TextMesh:
   m_GameObject: {fileID: 1986683987}
   m_Text: 'Press left click to shoot.
 
-    The blue bar in the corner is your ammo
+    The blue bar in the corner is your ammo, and the red bar is your health
 
     When the blue bar is depleted, press "r" to reload.'
   m_OffsetZ: 0
@@ -2597,7 +2514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986683987}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.47, y: -0.5, z: 1.39}
+  m_LocalPosition: {x: -0.36, y: -0.5, z: 1.87}
   m_LocalScale: {x: 0.06666667, y: 0.0666667, z: 0.0666667}
   m_Children: []
   m_Father: {fileID: 459853032}
@@ -2698,7 +2615,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069132375}
-  m_Text: 'Welcome to <GameName>
+  m_Text: 'Welcome to OFUP, our first unity project
 
     Press WASD or arrow keys to move.'
   m_OffsetZ: 0
@@ -2759,7 +2676,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069132375}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -15.149294, y: -0.50004196, z: 1.0456325}
+  m_LocalPosition: {x: -15.83, y: -0.5, z: 2.85}
   m_LocalScale: {x: 0.06666667, y: 0.0666667, z: 0.0666667}
   m_Children: []
   m_Father: {fileID: 459853032}
@@ -2797,7 +2714,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138031906}
-  m_Text: "That is a spawner. ->\nIt will start spawning\n when you approach"
+  m_Text: This is a spawner. ->
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -2856,7 +2773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138031906}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 32.46, y: -0.50004196, z: 0.78}
+  m_LocalPosition: {x: 40.66, y: -0.5, z: 2.45}
   m_LocalScale: {x: 0.06666667, y: 0.0666667, z: 0.0666667}
   m_Children: []
   m_Father: {fileID: 459853032}
@@ -2947,9 +2864,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144521052}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 45.89071, y: -0.5, z: -28.04}
+  m_LocalPosition: {x: 45.89071, y: -0.5, z: -22.04}
   m_LocalScale: {x: 0.06666667, y: 0.0666667, z: 0.0666667}
-  m_Children: []
+  m_Children:
+  - {fileID: 1337529665}
   m_Father: {fileID: 459853032}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
